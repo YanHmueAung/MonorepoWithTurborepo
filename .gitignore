@@ -1,6 +1,16 @@
 modules/*
 node_modules/*
 
-back/node_modules/*
-front/node_modules/*
-viteFrontend/node_modules/*
+
+apps/api/node_modules/*
+apps/web/node_modules/*
+apps/front/node_modules/*
+
+./apps/api/node_modules/*
+./apps/api/node_modules
+./apps/web/node_modules/*
+./apps/front/node_modules/*
+
+apps/api/node_modules
+apps/web/node_modules
+apps/front/node_modules

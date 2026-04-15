@@ -1,4 +1,4 @@
 
-> api@1.0.0 check-types C:\Users\yanhm\Pictures\732code\Monorepo\MonorepoWithTurborepo\apps\api
+> api@1.0.0 check-types C:\Users\yanhm\Pictures\732code\Demo\MonorepoWithTurborepo\apps\api
 > tsc --noEmit
 

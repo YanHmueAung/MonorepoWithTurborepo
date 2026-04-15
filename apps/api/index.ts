@@ -14,7 +14,7 @@ type Event = {
 const events: Event[] = [
     {
         id: "1",
-        title: "Study Session",
+        title: "Study Sessions",
         date: "2026-05-10",
         location: "Engineering Building"
     },

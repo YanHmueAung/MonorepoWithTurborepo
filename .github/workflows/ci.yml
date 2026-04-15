@@ -2,7 +2,7 @@ name: CI
 
 on:
   push:
-    branches: [main]
+    branches: [monorepo]
   pull_request:
 
 jobs:

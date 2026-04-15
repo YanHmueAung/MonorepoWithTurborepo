@@ -1,11 +1,5 @@
 import { useEffect, useState } from "react";
-
-type Event = {
-  id: string;
-  title: string;
-  date: string;
-  location: string;
-};
+import type { Event } from "@repo/types";
 
 function App() {
   const [events, setEvents] = useState<Event[]>([]);
@@ -45,7 +39,7 @@ function App() {
           <div
             key={event.id}
             style={{
-              border: "1px solid #ee1e1eff",
+              border: "1px solid #ddd",
               borderRadius: "12px",
               padding: "16px",
               marginBottom: "12px"

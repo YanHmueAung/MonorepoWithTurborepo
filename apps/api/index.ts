@@ -1,16 +1,11 @@
 import express from "express";
 import cors from "cors";
+import type { Event } from "@repo/types";
 
 const app = express();
 app.use(cors());
 const PORT = 4000;
 
-type Event = {
-    id: string;
-    title: string;
-    date: string;
-    location: string;
-};
 
 const events: Event[] = [
     {

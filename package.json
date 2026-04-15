@@ -5,13 +5,16 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "echo root dev",
-    "build": "echo root build",
-    "check-types": "echo root check-types",
+    "dev": "turbo dev",
+    "build": "turbo build",
+    "check-types": "turbo check-types",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "packageManager": "pnpm@10.33.0"
+  "packageManager": "pnpm@10.33.0",
+  "devDependencies": {
+    "turbo": "^2.9.6"
+  }
 }

@@ -12,7 +12,7 @@ const events: Event[] = [
         id: "1",
         title: "Study Sessions",
         date: "2026-05-10",
-        location: "Engineering Building"
+        location: "Engineering Buildin"
     },
     {
         id: "2",

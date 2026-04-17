@@ -23,6 +23,10 @@
             "dependsOn": [
                 "^lint"
             ]
-        }
+        },
+        "test": {},
+    },
+    "remoteCache": {
+        "signature": true,
     }
 }

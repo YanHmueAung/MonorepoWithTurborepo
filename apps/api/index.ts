@@ -12,19 +12,22 @@ const events: Event[] = [
         id: "1",
         title: "Study Sessions",
         date: "2026-05-10",
-        location: "Engineering Buildin"
+        location: "Engineering Buildin",
+        description: "Study sessions for the upcoming exams"
     },
     {
         id: "2",
         title: "Hackathon Event",
         date: "2026-05-15",
-        location: "City Campus"
+        location: "City Campus",
+        description: "Hackathon event for the upcoming hackathon"
     },
     {
         id: "3",
         title: "Career Fair",
         date: "2026-05-20",
-        location: "Business School"
+        location: "Business School",
+        description: "Career fair for the upcoming carrer"
     }
 ];
 

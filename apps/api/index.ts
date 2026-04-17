@@ -27,7 +27,7 @@ const events: Event[] = [
         title: "Career Fair",
         date: "2026-05-20",
         location: "Business School",
-        description: "Career fair for the upcoming carrer"
+        description: "Career fair for the upcoming carrers"
     }
 ];
 

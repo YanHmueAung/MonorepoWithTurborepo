@@ -10,13 +10,13 @@ const PORT = 4000;
 const events: Event[] = [
     {
         id: "1",
-        title: "Study Sessions test",
+        title: "Study Sessions",
         date: "2026-05-10",
         location: "Engineering Buildin"
     },
     {
         id: "2",
-        title: "Hackathon",
+        title: "Hackathon Event",
         date: "2026-05-15",
         location: "City Campus"
     },

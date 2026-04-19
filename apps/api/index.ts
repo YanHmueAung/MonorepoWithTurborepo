@@ -1,4 +1,4 @@
-import express from "express";
+import express, { RequestHandler } from "express";
 import cors from "cors";
 import type { Event } from "@repo/types";
 
@@ -30,21 +30,19 @@ const events: Event[] = [
         description: "Career fair for the upcoming carrers"
     }
 ];
-
-app.get("/", (_req: express.Request, res: express.Response) => {
+const homeHandler: RequestHandler = (_req, res) => {
     res.send("Backend is running");
-});
+};
 
-app.get("/api/events", (_req: express.Request, res: express.Response) => {
+const eventsHandler: RequestHandler = (_req, res) => {
     res.json(events);
-});
+};
 
-// Only listen locally, not on Vercel
+app.get("/", homeHandler);
+app.get("/api/events", eventsHandler);
+
 if (process.env.NODE_ENV !== "production") {
-    const PORT = 4000;
-    app.listen(PORT, () => {
-        console.log(`Server running at http://localhost:${PORT}`);
-    });
+    app.listen(4000, () => console.log(`Server running at http://localhost:4000`));
 }
 
 export default app;

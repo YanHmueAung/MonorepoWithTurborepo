@@ -1,5 +1,8 @@
 {
     "version": 2,
+    "buildCommand": "pnpm turbo run build",
+    "installCommand": "pnpm install",
+    "outputDirectory": "apps/web/dist",
     "builds": [
         {
             "src": "apps/api/index.ts",
@@ -7,9 +10,9 @@
         }
     ],
     "routes": [
-        {
-            "src": "/(.*)",
-            "dest": "apps/api/index.ts"
-        }
+        { "src": "/api/(.*)", "dest": "apps/api/index.ts" },
+        { "src": "/", "dest": "apps/api/index.ts" },
+        { "handle": "filesystem" },
+        { "src": "/(.*)", "dest": "/index.html" }
     ]
 }

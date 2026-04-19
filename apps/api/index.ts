@@ -1,4 +1,4 @@
-import express, { Request, Response } from "express";
+import express from "express";
 import cors from "cors";
 import type { Event } from "@repo/types";
 
@@ -31,11 +31,11 @@ const events: Event[] = [
     }
 ];
 
-app.get("/", (_req: Request, res: Response) => {
+app.get("/", (_req: express.Request, res: express.Response) => {
     res.send("Backend is running");
 });
 
-app.get("/api/events", (_req: Request, res: Response) => {
+app.get("/api/events", (_req: express.Request, res: express.Response) => {
     res.json(events);
 });
 

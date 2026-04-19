@@ -39,6 +39,12 @@ app.get("/api/events", (_req, res) => {
     res.json(events);
 });
 
-app.listen(PORT, () => {
-    console.log(`Server running at http://localhost:${PORT}`);
-});
+// Only listen locally, not on Vercel
+if (process.env.NODE_ENV !== "production") {
+    const PORT = 4000;
+    app.listen(PORT, () => {
+        console.log(`Server running at http://localhost:${PORT}`);
+    });
+}
+
+export default app;

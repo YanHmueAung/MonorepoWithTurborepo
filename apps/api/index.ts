@@ -30,7 +30,6 @@ const events: Event[] = [
         description: "Career fair for the upcoming carrers"
     }
 ];
-
 app.get("/", (_req, res) => {
     res.send("Backend is running");
 });
@@ -38,7 +37,8 @@ app.get("/", (_req, res) => {
 app.get("/api/events", (_req, res) => {
     res.json(events);
 });
+if (process.env.NODE_ENV !== "production") {
+    app.listen(4000, () => console.log(`Server running at http://localhost:4000`));
+}
 
-app.listen(PORT, () => {
-    console.log(`Server running at http://localhost:${PORT}`);
-});
+export default app;

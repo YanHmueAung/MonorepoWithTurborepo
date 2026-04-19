@@ -10,7 +10,8 @@ function App() {
   async function loadEvents() {
     try {
       setLoading(true);
-      const response = await fetch("http://localhost:4000/api/events");
+      const API_BASE = import.meta.env.VITE_API_URL ?? "";
+      const response = await fetch(`${API_BASE}/api/events`);
       if (!response.ok) {
         throw new Error("Failed to fetch events");
       }

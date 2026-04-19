@@ -10,7 +10,7 @@ function App() {
   async function loadEvents() {
     try {
       setLoading(true);
-      const response = await fetch("http://localhost:4000/api/events");
+      const response = await fetch("/api/events");
       if (!response.ok) {
         throw new Error("Failed to fetch events");
       }

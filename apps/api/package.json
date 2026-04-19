@@ -1,0 +1,35 @@
+{
+  "name": "api",
+  "version": "1.0.0",
+  "description": "",
+  "repository": {
+    "type": "git",
+    "url": "MonorepoWithTurborepo"
+  },
+  "license": "ISC",
+  "author": "Yan",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "check-types": "tsc --noEmit",
+    "start": "node dist/index.ts",
+    "dev": "tsx watch index.ts",
+    "build": "tsc",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "@repo/types": "workspace:*",
+    "cors": "^2.8.6",
+    "express": "^5.2.1",
+    "loadash": "^1.0.0",
+    "nodemon": "^3.1.14",
+    "react": "^19.2.5"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.19",
+    "@types/express": "^5.0.6",
+    "@types/node": "^25.6.0",
+    "tsx": "^4.21.0",
+    "typescript": "^6.0.2"
+  }
+}

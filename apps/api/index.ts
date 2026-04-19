@@ -1,4 +1,4 @@
-import express, { RequestHandler } from "express";
+import express from "express";
 import cors from "cors";
 import type { Event } from "@repo/types";
 
@@ -30,17 +30,13 @@ const events: Event[] = [
         description: "Career fair for the upcoming carrers"
     }
 ];
-const homeHandler: RequestHandler = (_req, res) => {
+app.get("/", (_req, res) => {
     res.send("Backend is running");
-};
+});
 
-const eventsHandler: RequestHandler = (_req, res) => {
+app.get("/api/events", (_req, res) => {
     res.json(events);
-};
-
-app.get("/", homeHandler);
-app.get("/api/events", eventsHandler);
-
+});
 if (process.env.NODE_ENV !== "production") {
     app.listen(4000, () => console.log(`Server running at http://localhost:4000`));
 }
